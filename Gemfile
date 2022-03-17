@@ -24,7 +24,6 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
-gem 'haml-rails', '~> 1.0'
 gem 'turbolinks', '~> 5'
 
 # Backend
