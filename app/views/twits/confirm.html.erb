@@ -1,9 +1,11 @@
-<h3>Voulez-vous vraiment poster un message !</h3>
+<h1>Écran de confirmation</h1>
+<h3>Voulez-vous vraiment poster un tweet !</h3>
 
 <%= form_with(model: @twit, url: twits_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
-  
+
     <p><%= @twit_content %></p>
   <%= form.submit "Tweetté" %>
-  <%= form.submit "back", name: 'Back' %>
+
+  <%= form.submit "Retourner", name: 'back' %>
 <% end %>
