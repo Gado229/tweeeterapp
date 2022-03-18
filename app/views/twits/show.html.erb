@@ -1,0 +1,5 @@
+<h1>Ètes_vous sûre ?</h1>
+<p>Contents : <%= @twit.content %></p><br>
+
+<%= link_to 'Destroy', twit_path(@twit.id), method: :delete, class: "button" %>
+<%= link_to 'Twit Screen', twits_path %>

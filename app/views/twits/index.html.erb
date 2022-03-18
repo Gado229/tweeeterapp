@@ -1,2 +1,56 @@
-<h1>Twits#index</h1>
-<p>Find me in app/views/twits/index.html.erb</p>
+<span id="notice"><%= notice %></span>
+
+<div class="home_0">
+  <div class="twit_btn_mini"><br>
+  <%= image_tag "benlogo.png", size: '48x48' %>
+  </div>
+</div>
+<div class="box_0">
+  <%= image_tag "logo2.png", size: '90x50', class: "acc_pic" %>
+  <span class="now">TWITTER_CLONE</span>
+</div>
+<div class="box_btn_0">
+  <div class="twit_btn_mini">
+    <%= link_to 'Tweetté', new_twit_path, class: "menu_btn_mini" %>
+  </div>
+</div>
+<div class="bold_border"></div>
+    <% @twit.each do |twit| %>
+    <div class="twit_box">
+      <table>
+        <tr>
+          <td class="img">
+            <%= image_tag "logo2.png", size: '50x50', class: "acc_pic" %>
+          </td>
+          <td class="name_and_content">
+        <span class="acc_name">Le BÉNIN</span>
+        <span class="acc_name_thin">JUSTICE</span>
+    <div class="main_twit"><%= twit.content %></div>
+          </td>
+          <td class="edit">
+            <%= link_to edit_twit_path(twit.id)do %>
+            <%= image_tag "edit.png", size: '14x14' %>
+            <% end %>
+          </td>
+          <td class="edit">
+            <%= link_to twit_path(twit.id)do %>
+            <%= image_tag "delete.png", size: '14x14' %>
+            <% end %>
+          </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+    <div class="twit_box_gadget">
+            <%= image_tag "rep.png", size: '14x14', class: 'gadget-pics' %>
+            <%= image_tag "retwit.png", size: '14x14', class: 'gadget-pics' %>
+            <%= image_tag "fav.png", size: '14x14', class: 'gadget-pics' %>
+            <%= image_tag "link.png", size: '14x14', class: 'gadget-pics' %>
+    </div>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+  </table>
+</div>
+<% end %>

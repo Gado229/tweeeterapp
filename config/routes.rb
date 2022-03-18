@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-
-  get 'twits/index'
   root to: 'twits#index'
-  resources :twits
+resources :twits do
+  collection do
+    post :confirm
+  end
+end
 end
